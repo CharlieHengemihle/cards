@@ -1,7 +1,9 @@
 import { useState } from 'react';
-import { createContext } from 'react';
+import { createContext, useContext } from 'react';
+import initialCards from '../cards-data.js';
 
 const GameContext = createContext();
+
 const GameProvider = ({ children }) => {
   const [deck, setDeck] = useState(initialCards);
   const [playerOneHand, setPlayerOneHand] = useState([]);
